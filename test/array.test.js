@@ -4,6 +4,36 @@
  * @Date: 2021-04-25 11:49:06
  */
 describe('Array API:', function () {
+    describe('isArray', function () {
+        it("expect(hx_utils.isArray('')).toEqual(false)", function () {
+            expect(hx_utils.isArray('')).toEqual(false);
+        });
+        it('expect(hx_utils.isArray(false)).toEqual(false)', function () {
+            expect(hx_utils.isArray(false)).toEqual(false);
+        });
+        it("expect(hx_utils.isArray([''])).toEqual(true)", function () {
+            expect(hx_utils.isArray([''])).toEqual(true);
+        });
+        it('expect(hx_utils.isArray(null)).toEqual(false)', function () {
+            expect(hx_utils.isArray(null)).toEqual(false);
+        });
+        it('expect(hx_utils.isArray(undefined)).toEqual(false)', function () {
+            expect(hx_utils.isArray(undefined)).toEqual(false);
+        });
+        it('expect(hx_utils.isArray(new Array())).toEqual(true)', function () {
+            expect(hx_utils.isArray(new Array())).toEqual(true);
+        });
+        it('expect(hx_utils.isArray()).toEqual(false)', function () {
+            expect(hx_utils.isArray()).toEqual(false);
+        });
+        it('expect(hx_utils.isArray(4)).toEqual(false)', function () {
+            expect(hx_utils.isArray(4)).toEqual(false);
+        });
+        it('expect(hx_utils.isArray([1, null, 2])).toEqual(true)', function () {
+            expect(hx_utils.isArray([1, null, 2])).toEqual(true);
+        });
+    });
+
     describe('arrayEqual()', function () {
         it('expect(hx_utils.arrayEqual([], [])).toEqual(true)', function () {
             expect(hx_utils.arrayEqual([], [])).toEqual(true);
