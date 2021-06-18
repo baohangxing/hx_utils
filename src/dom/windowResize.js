@@ -1,9 +1,9 @@
 /**
  *
- * @desc H5软键盘缩回、弹起回调
- * 当软件键盘弹起会改变当前 window.innerHeight，监听这个值变化
- * @param {Function} downCb 当软键盘弹起后，缩回的回调
- * @param {Function} upCb 当软键盘弹起的回调
+ * @desc monitor the soft keyboard pop-down and pop-up
+ * When the software keyboard pop-up will change window.innerHeight，the principle is to monitor the value changes
+ * @param {Function} downCb callback after the soft keyboard pop-down
+ * @param {Function} upCb callback after the soft keyboard pop-up
  */
 
 function windowResize(downCb, upCb) {

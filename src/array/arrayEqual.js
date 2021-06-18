@@ -1,3 +1,4 @@
+var isArray = require('./isArray');
 /**
  *
  * @desc Determine whether two arrays are equal
@@ -6,8 +7,7 @@
  * @return {Boolean}
  */
 function arrayEqual(arr1, arr2) {
-    if (!arr1 || !arr2) return false;
-    if (arr1 === arr2) return true;
+    if (!isArray(arr1) || !isArray(arr2)) return false;
     if (arr1.length !== arr2.length) return false;
     var len = arr1.length;
     for (var i = 0; i < len; ++i) {

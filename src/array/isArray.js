@@ -5,8 +5,7 @@
  * @returns {boolean} True if value is an Array, otherwise false
  */
 function isArray(val) {
-    var toString = Object.prototype.toString;
-    return toString.call(val) === '[object Array]';
+    return Object.prototype.toString.call(val) === '[object Array]';
 }
 
 module.exports = isArray;

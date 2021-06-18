@@ -108,7 +108,7 @@ var keyCodeMap = {
     222: "'",
 };
 /**
- * @desc 根据keycode获得键名
+ * @desc get Key name according to the keycode
  * @param  {Number} keycode
  * @return {String}
  */
@@ -116,7 +116,7 @@ function getKeyName(keycode) {
     if (keyCodeMap[keycode]) {
         return keyCodeMap[keycode];
     } else {
-        console.log('Unknow Key(Key Code:' + keycode + ')');
+        console.warn('Unknow Key(Key Code:' + keycode + ')');
         return '';
     }
 }

@@ -1,6 +1,6 @@
 /**
  *
- * @desc 随机生成颜色
+ * @desc get random color
  * @return {String}
  */
 function randomColor() {
